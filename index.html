@@ -25,9 +25,7 @@
     --radius-md: 20px;
     --radius-sm: 12px;
   }
-
   *{ box-sizing: border-box; }
-
   html,body{
     margin:0; padding:0; height:100%;
     background: radial-gradient(circle at 30% 15%, var(--bg-mid) 0%, var(--bg-deep) 60%);
@@ -35,12 +33,10 @@
     color: var(--ink);
     overflow: hidden;
   }
-
   .display{
     font-family: 'Baloo 2', 'Inter', sans-serif;
     font-weight: 700;
   }
-
   #app{
     position: relative;
     width: 100vw;
@@ -49,8 +45,6 @@
     align-items: center;
     justify-content: center;
   }
-
-  /* subtle background grid accent, echoing the app icon */
   .bg-grid{
     position: absolute;
     bottom: 6%;
@@ -61,14 +55,12 @@
     pointer-events: none;
   }
   .bg-grid svg{ width:100%; height:100%; }
-
   .bg-grid.top-right{
     bottom: auto; left: auto;
     top: 8%; right: 7%;
     width: 110px; height: 110px;
     transform: rotate(8deg);
   }
-
   .screen{
     position: absolute;
     inset: 0;
@@ -87,7 +79,6 @@
     pointer-events: auto;
     transform: scale(1);
   }
-
   .card{
     width: 100%;
     max-width: 480px;
@@ -98,7 +89,6 @@
     box-shadow: 0 20px 60px rgba(15, 10, 60, 0.4);
     position: relative;
   }
-
   h1.title{
     font-size: 44px;
     margin: 0 0 6px;
@@ -116,21 +106,17 @@
     margin: 0 0 36px;
     line-height: 1.5;
   }
-
-  /* logo mark used on start screen */
   .logo-mark{
     width: 96px;
     height: 96px;
     margin: 0 auto 20px;
   }
-
   button{
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     border: none;
     outline: none;
   }
-
   .btn{
     display: block;
     width: 100%;
@@ -146,7 +132,6 @@
   }
   .btn:hover{ transform: translateY(-2px); filter: brightness(1.04); }
   .btn:active{ transform: translateY(0); }
-
   .btn.primary{ background: var(--yellow); }
   .btn.teal{ background: var(--teal); color: #06342c; }
   .btn.coral{ background: var(--coral); color: #3a0f08; }
@@ -156,7 +141,6 @@
     color: var(--white);
   }
   .btn.ghost:hover{ border-color: rgba(255,255,255,0.4); }
-
   .btn.small{
     display: inline-block;
     width: auto;
@@ -164,40 +148,39 @@
     font-size: 14px;
     margin: 0 6px;
   }
-
   .choice-row{
     display: flex;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 16px;
   }
   .choice-row .btn{ margin-bottom: 0; }
-
   .choice-card{
     flex: 1;
-    padding: 18px 12px;
+    padding: 16px 8px;
     border-radius: var(--radius-md);
     background: rgba(255,255,255,0.06);
     border: 2px solid transparent;
     font-family: 'Baloo 2', sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--white);
     transition: all 0.15s ease;
+    cursor: pointer;
   }
   .choice-card .sub{
     display:block;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--muted);
     margin-top: 4px;
+    line-height: 1.2;
   }
   .choice-card:hover{ background: rgba(255,255,255,0.1); }
   .choice-card.selected{
     border-color: var(--yellow);
     background: rgba(255, 209, 102, 0.12);
   }
-
   .section-label{
     text-align: left;
     font-size: 13px;
@@ -208,7 +191,6 @@
     font-weight: 600;
   }
   .section-label:first-of-type{ margin-top: 0; }
-
   /* ---- coin flip ---- */
   .coin-wrap{
     width: 140px; height: 140px;
@@ -233,11 +215,9 @@
   }
   .coin-face.front{ background: var(--coral); color: #3a0f08; }
   .coin-face.back{ background: var(--teal); color: #06342c; transform: rotateY(180deg); }
-
   .coin.flipping{ transform: rotateY(1800deg); }
   .coin.result-x{ transform: rotateY(1800deg); }
   .coin.result-o{ transform: rotateY(1980deg); }
-
   #pregameResultText{
     font-size: 18px;
     font-weight: 700;
@@ -245,7 +225,6 @@
     margin-bottom: 22px;
     color: var(--white);
   }
-
   /* ---- game screen ---- */
   .game-header{
     width: 100%;
@@ -279,7 +258,6 @@
   }
   .score-pill.x .count{ color: var(--coral); }
   .score-pill.o .count{ color: var(--teal); }
-
   .turn-indicator{
     text-align: center;
     font-family: 'Baloo 2', sans-serif;
@@ -288,7 +266,6 @@
     margin-bottom: 14px;
     min-height: 22px;
   }
-
   .board{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -327,7 +304,6 @@
     transition: background 0.15s ease;
   }
   .cell.playable:hover{ background: rgba(255,255,255,0.13); }
-
   .mark{
     width: 58%;
     height: 58%;
@@ -338,7 +314,6 @@
     0%{ transform: scale(0.4); opacity: 0; }
     100%{ transform: scale(1); opacity: 1; }
   }
-
   .mark-x .bar{
     position: absolute;
     top: 50%; left: 50%;
@@ -350,7 +325,6 @@
   }
   .mark-x .bar.b1{ transform: translate(-50%,-50%) rotate(45deg); }
   .mark-x .bar.b2{ transform: translate(-50%,-50%) rotate(-45deg); }
-
   .mark-o{
     width: 100%; height: 100%;
     color: var(--teal);
@@ -360,13 +334,11 @@
     height: 100%;
     display: block;
   }
-
   .game-footer{
     margin-top: 20px;
     display: flex;
     gap: 10px;
   }
-
   /* ---- win screen ---- */
   .win-stage{
     position: relative;
@@ -419,7 +391,6 @@
     position: relative;
     z-index: 2;
   }
-
   .back-link{
     position: absolute;
     top: 22px;
@@ -432,16 +403,13 @@
     padding: 8px 10px;
   }
   .back-link:hover{ color: var(--white); }
-
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   }
 </style>
 </head>
 <body>
-
 <div id="app">
-
   <div class="bg-grid"><svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none">
     <line x1="30" y1="10" x2="30" y2="130"/><line x1="70" y1="10" x2="70" y2="130"/><line x1="110" y1="10" x2="110" y2="130"/>
     <line x1="10" y1="30" x2="130" y2="30"/><line x1="10" y1="70" x2="130" y2="70"/><line x1="10" y1="110" x2="130" y2="110"/>
@@ -450,7 +418,6 @@
     <line x1="30" y1="10" x2="30" y2="130"/><line x1="70" y1="10" x2="70" y2="130"/><line x1="110" y1="10" x2="110" y2="130"/>
     <line x1="10" y1="30" x2="130" y2="30"/><line x1="10" y1="70" x2="130" y2="70"/><line x1="10" y1="110" x2="130" y2="110"/>
   </svg></div>
-
   <!-- START SCREEN -->
   <div class="screen active" id="screen-start">
     <div class="card">
@@ -467,7 +434,6 @@
       <button class="btn primary" onclick="goTo('menu')">Play</button>
     </div>
   </div>
-
   <!-- MENU SCREEN -->
   <div class="screen" id="screen-menu">
     <div class="card">
@@ -477,29 +443,25 @@
       <button class="btn ghost" onclick="goTo('start')">Back</button>
     </div>
   </div>
-
   <!-- SOLO SETUP SCREEN -->
   <div class="screen" id="screen-soloSetup">
     <div class="card">
       <h2 class="subtitle display">Solo setup</h2>
-
       <div class="section-label">Difficulty</div>
       <div class="choice-row">
         <div class="choice-card" id="diff-easy" onclick="selectDifficulty('easy')">Easy<span class="sub">Computer plays simply</span></div>
         <div class="choice-card" id="diff-hard" onclick="selectDifficulty('hard')">Hard<span class="sub">Computer thinks ahead</span></div>
+        <div class="choice-card" id="diff-impossible" onclick="selectDifficulty('impossible')">Impossible<span class="sub">2&times; pts for computer</span></div>
       </div>
-
       <div class="section-label">Who goes first</div>
       <div class="choice-row">
         <div class="choice-card" id="first-player" onclick="selectFirst('player')">You</div>
         <div class="choice-card" id="first-computer" onclick="selectFirst('computer')">Computer</div>
       </div>
-
       <button class="btn primary" style="margin-top:24px" onclick="startSoloGame()">Start game</button>
       <button class="btn ghost" onclick="goTo('menu')">Back</button>
     </div>
   </div>
-
   <!-- PREGAME (COIN FLIP) SCREEN -->
   <div class="screen" id="screen-pregame">
     <div class="card">
@@ -515,7 +477,6 @@
       <button class="btn ghost" onclick="goTo('menu')">Back</button>
     </div>
   </div>
-
   <!-- GAME SCREEN -->
   <div class="screen" id="screen-game">
     <div class="back-link" onclick="goTo('menu')">&larr; Menu</div>
@@ -535,28 +496,24 @@
       <button class="btn ghost small" onclick="resetCurrentGame()">Restart</button>
     </div>
   </div>
-
   <!-- WIN SCREEN -->
   <div class="screen" id="screen-win">
     <div class="win-stage" id="winStage">
       <h1 class="win-title display" id="winTitle">X wins!</h1>
-      <p class="win-sub" id="winSub">4 runs to 2</p>
+      <p class="win-sub" id="winSub">4 points to 2</p>
       <div class="win-actions">
         <button class="btn primary small" onclick="rematch()">Play again</button>
         <button class="btn ghost small" onclick="goTo('menu')">Menu</button>
       </div>
     </div>
   </div>
-
 </div>
-
 <script>
   const SIZE = 5;
   const TARGET = 3;
-
   let state = {
     mode: null,          // 'solo' | 'multi'
-    difficulty: 'easy',
+    difficulty: 'easy',  // 'easy' | 'hard' | 'impossible'
     soloFirst: 'player',
     humanSymbol: 1,       // 1 = X, 2 = O
     computerSymbol: 2,
@@ -567,18 +524,17 @@
     coinResult: null,
     strikesShown: new Set()
   };
-
   // ---------- navigation ----------
   function goTo(name){
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById('screen-' + name).classList.add('active');
   }
-
   // ---------- solo setup ----------
   function selectDifficulty(d){
     state.difficulty = d;
     document.getElementById('diff-easy').classList.toggle('selected', d === 'easy');
     document.getElementById('diff-hard').classList.toggle('selected', d === 'hard');
+    document.getElementById('diff-impossible').classList.toggle('selected', d === 'impossible');
   }
   function selectFirst(who){
     state.soloFirst = who;
@@ -587,7 +543,6 @@
   }
   selectDifficulty('easy');
   selectFirst('player');
-
   function startSoloGame(){
     state.mode = 'solo';
     state.humanSymbol = 1;
@@ -599,7 +554,6 @@
     updateTurnUI();
     maybeComputerMove();
   }
-
   // ---------- multiplayer pregame ----------
   function startPregame(){
     document.getElementById('coin').className = 'coin';
@@ -607,7 +561,6 @@
     document.getElementById('flipBtn').style.display = 'block';
     goTo('pregame');
   }
-
   function flipCoin(){
     const coin = document.getElementById('coin');
     const heads = Math.random() < 0.5;
@@ -623,7 +576,6 @@
       btn.onclick = startMultiGame;
     }, 2100);
   }
-
   function startMultiGame(){
     state.mode = 'multi';
     state.startingPlayer = state.coinResult || 1;
@@ -632,7 +584,6 @@
     renderBoard();
     updateTurnUI();
   }
-
   // ---------- board / scoring ----------
   function initBoard(){
     state.board = Array.from({length: SIZE}, () => Array(SIZE).fill(0));
@@ -640,7 +591,6 @@
     state.gameOver = false;
     state.strikesShown = new Set();
   }
-
   function countRuns(board, player){
     let total = 0;
     for(let r = 0; r < SIZE; r++){
@@ -663,13 +613,14 @@
         if(board[r][c+2]===player && board[r+1][c+1]===player && board[r+2][c]===player) total++;
       }
     }
+    if(state.mode === 'solo' && state.difficulty === 'impossible' && player === state.computerSymbol){
+      return total * 2;
+    }
     return total;
   }
-
   function isFull(board){
     return board.every(row => row.every(cell => cell !== 0));
   }
-
   function renderBoard(){
     const boardEl = document.getElementById('board');
     boardEl.innerHTML = '';
@@ -698,7 +649,6 @@
     updateScorePills();
     renderStrikes();
   }
-
   function getCompletedLines(board, player){
     const result = [];
     ALL_LINES.forEach((line, idx) => {
@@ -708,25 +658,21 @@
     });
     return result;
   }
-
   function renderStrikes(){
     const boardEl = document.getElementById('board');
     let layer = document.createElement('div');
     layer.className = 'strike-layer';
     boardEl.appendChild(layer);
-
     const boardRect = boardEl.getBoundingClientRect();
     const lines = [
       ...getCompletedLines(state.board, 1).map(l => ({...l, player: 1})),
       ...getCompletedLines(state.board, 2).map(l => ({...l, player: 2}))
     ];
-
     lines.forEach(line => {
       const [[r0, c0], , [r2, c2]] = line.cells;
       const cellA = boardEl.children[r0 * SIZE + c0];
       const cellB = boardEl.children[r2 * SIZE + c2];
       if(!cellA || !cellB) return;
-
       const a = cellA.getBoundingClientRect();
       const b = cellB.getBoundingClientRect();
       const ax = a.left + a.width / 2 - boardRect.left;
@@ -736,16 +682,13 @@
       const dx = bx - ax, dy = by - ay;
       const length = Math.sqrt(dx * dx + dy * dy) + 16;
       const angle = Math.atan2(dy, dx) * 180 / Math.PI;
-
       const div = document.createElement('div');
       div.className = 'strike-line';
       div.style.left = (ax - 8) + 'px';
       div.style.top = ay + 'px';
       div.style.width = length + 'px';
-
       const finalTransform = `translateY(-50%) rotate(${angle}deg) scaleX(1)`;
       const isNew = !state.strikesShown.has(line.key);
-
       if(isNew){
         div.style.transform = `translateY(-50%) rotate(${angle}deg) scaleX(0)`;
         layer.appendChild(div);
@@ -759,12 +702,10 @@
       }
     });
   }
-
   function isHumanTurnNow(){
     if(state.mode === 'multi') return true;
     return state.current === state.humanSymbol;
   }
-
   function updateScorePills(){
     const sx = countRuns(state.board, 1);
     const so = countRuns(state.board, 2);
@@ -772,7 +713,6 @@
     document.getElementById('countO').textContent = so;
     document.getElementById('scorePillX').classList.toggle('active', state.current === 1 && !state.gameOver);
     document.getElementById('scorePillO').classList.toggle('active', state.current === 2 && !state.gameOver);
-
     let labelX = 'X', labelO = 'O';
     if(state.mode === 'solo'){
       labelX = state.humanSymbol === 1 ? 'You' : 'Computer';
@@ -781,7 +721,6 @@
     document.getElementById('labelX').textContent = labelX;
     document.getElementById('labelO').textContent = labelO;
   }
-
   function updateTurnUI(){
     const el = document.getElementById('turnIndicator');
     if(state.gameOver){ el.textContent = ''; return; }
@@ -791,17 +730,14 @@
       el.textContent = (state.current === 1 ? 'X' : 'O') + "'s turn";
     }
   }
-
   function handleCellClick(r, c){
     if(state.gameOver || state.board[r][c] !== 0) return;
     if(state.mode === 'solo' && state.current !== state.humanSymbol) return;
     placeMark(r, c, state.current);
   }
-
   function placeMark(r, c, player){
     state.board[r][c] = player;
     renderBoard();
-
     if(isFull(state.board)){
       endGame();
       return;
@@ -811,28 +747,31 @@
     renderBoard();
     maybeComputerMove();
   }
-
   function maybeComputerMove(){
     if(state.mode !== 'solo') return;
     if(state.gameOver) return;
     if(state.current !== state.computerSymbol) return;
     document.getElementById('turnIndicator').textContent = "Computer's turn";
     setTimeout(() => {
-      const move = (state.difficulty === 'hard') ? pickHardMove() : pickEasyMove();
+      let move;
+      if(state.difficulty === 'impossible'){
+        move = pickImpossibleMove();
+      } else if(state.difficulty === 'hard'){
+        move = pickHardMove();
+      } else {
+        move = pickEasyMove();
+      }
       if(move) placeMark(move.r, move.c, state.computerSymbol);
     }, 550);
   }
-
   function emptyCells(board){
     const cells = [];
     for(let r = 0; r < SIZE; r++) for(let c = 0; c < SIZE; c++) if(board[r][c] === 0) cells.push({r, c});
     return cells;
   }
-
   function cloneBoard(board){
     return board.map(row => row.slice());
   }
-
   function pickEasyMove(){
     const comp = state.computerSymbol;
     const cells = emptyCells(state.board);
@@ -847,17 +786,13 @@
     }
     return best[Math.floor(Math.random() * best.length)];
   }
-
-  // precompute every 3-cell line on the board once (used by the evaluation function)
   const ALL_LINES = [];
   for(let r = 0; r < SIZE; r++) for(let c = 0; c <= SIZE - TARGET; c++) ALL_LINES.push([[r,c],[r,c+1],[r,c+2]]);
   for(let c = 0; c < SIZE; c++) for(let r = 0; r <= SIZE - TARGET; r++) ALL_LINES.push([[r,c],[r+1,c],[r+2,c]]);
   for(let r = 0; r <= SIZE - TARGET; r++) for(let c = 0; c <= SIZE - TARGET; c++) ALL_LINES.push([[r,c],[r+1,c+1],[r+2,c+2]]);
   for(let r = 0; r <= SIZE - TARGET; r++) for(let c = 0; c <= SIZE - TARGET; c++) ALL_LINES.push([[r,c+2],[r+1,c+1],[r+2,c]]);
 
-  // rewards not just completed runs, but near-complete lines too, so the
-  // search has a meaningful signal even a few moves before anything is finished
-  function evaluateBoard(board, comp, opp){
+  function evaluateBoard(board, comp, opp, compMultiplier = 1){
     let score = 0;
     for(const line of ALL_LINES){
       let compCount = 0, oppCount = 0;
@@ -866,31 +801,29 @@
         if(v === comp) compCount++;
         else if(v === opp) oppCount++;
       }
-      if(compCount > 0 && oppCount > 0) continue; // dead line, nobody can complete it
-      if(compCount === 3) score += 100;
-      else if(compCount === 2) score += 10;
-      else if(compCount === 1) score += 1;
+      if(compCount > 0 && oppCount > 0) continue;
+      if(compCount === 3) score += 100 * compMultiplier;
+      else if(compCount === 2) score += 10 * compMultiplier;
+      else if(compCount === 1) score += 1 * compMultiplier;
       if(oppCount === 3) score -= 100;
       else if(oppCount === 2) score -= 10;
       else if(oppCount === 1) score -= 1;
     }
     return score;
   }
-
-  function minimax(board, depth, isMaximizing, comp, opp, alpha, beta){
+  function minimax(board, depth, isMaximizing, comp, opp, alpha, beta, compMultiplier = 1){
     const cells = emptyCells(board);
-    if(depth === 0 || cells.length === 0) return evaluateBoard(board, comp, opp);
+    if(depth === 0 || cells.length === 0) return evaluateBoard(board, comp, opp, compMultiplier);
     const player = isMaximizing ? comp : opp;
     const scored = cells.map(cell => {
       const b = cloneBoard(board);
       b[cell.r][cell.c] = player;
-      return { cell, b, h: evaluateBoard(b, comp, opp) };
+      return { cell, b, h: evaluateBoard(b, comp, opp, compMultiplier) };
     }).sort((a, b) => isMaximizing ? b.h - a.h : a.h - b.h);
-
     if(isMaximizing){
       let maxEval = -Infinity;
       for(const {b} of scored){
-        const e = minimax(b, depth - 1, false, comp, opp, alpha, beta);
+        const e = minimax(b, depth - 1, false, comp, opp, alpha, beta, compMultiplier);
         if(e > maxEval) maxEval = e;
         if(e > alpha) alpha = e;
         if(beta <= alpha) break;
@@ -899,7 +832,7 @@
     } else {
       let minEval = Infinity;
       for(const {b} of scored){
-        const e = minimax(b, depth - 1, true, comp, opp, alpha, beta);
+        const e = minimax(b, depth - 1, true, comp, opp, alpha, beta, compMultiplier);
         if(e < minEval) minEval = e;
         if(e < beta) beta = e;
         if(beta <= alpha) break;
@@ -907,32 +840,46 @@
       return minEval;
     }
   }
-
   function pickHardMove(){
     const comp = state.computerSymbol;
     const opp = state.humanSymbol;
     const cells = emptyCells(state.board);
     const remaining = cells.length;
-    // search deeper as the board fills up and the branching factor shrinks;
-    // solve exactly once few enough cells remain
     const depth = remaining <= 8 ? remaining : 4;
-
     let bestCells = [], bestVal = -Infinity, alpha = -Infinity, beta = Infinity;
     const scored = cells.map(cell => {
       const b = cloneBoard(state.board);
       b[cell.r][cell.c] = comp;
-      return { cell, b, h: evaluateBoard(b, comp, opp) };
+      return { cell, b, h: evaluateBoard(b, comp, opp, 1) };
     }).sort((a, b) => b.h - a.h);
-
     for(const {cell, b} of scored){
-      const val = minimax(b, depth - 1, false, comp, opp, alpha, beta);
+      const val = minimax(b, depth - 1, false, comp, opp, alpha, beta, 1);
       if(val > bestVal){ bestVal = val; bestCells = [cell]; }
       else if(val === bestVal){ bestCells.push(cell); }
       if(bestVal > alpha) alpha = bestVal;
     }
     return bestCells[Math.floor(Math.random() * bestCells.length)];
   }
-
+  function pickImpossibleMove(){
+    const comp = state.computerSymbol;
+    const opp = state.humanSymbol;
+    const cells = emptyCells(state.board);
+    const remaining = cells.length;
+    const depth = remaining <= 10 ? remaining : 5;
+    let bestCells = [], bestVal = -Infinity, alpha = -Infinity, beta = Infinity;
+    const scored = cells.map(cell => {
+      const b = cloneBoard(state.board);
+      b[cell.r][cell.c] = comp;
+      return { cell, b, h: evaluateBoard(b, comp, opp, 2) };
+    }).sort((a, b) => b.h - a.h);
+    for(const {cell, b} of scored){
+      const val = minimax(b, depth - 1, false, comp, opp, alpha, beta, 2);
+      if(val > bestVal){ bestVal = val; bestCells = [cell]; }
+      else if(val === bestVal){ bestCells.push(cell); }
+      if(bestVal > alpha) alpha = bestVal;
+    }
+    return bestCells[Math.floor(Math.random() * bestCells.length)];
+  }
   function resetCurrentGame(){
     if(!state.mode) return;
     initBoard();
@@ -940,7 +887,6 @@
     updateTurnUI();
     maybeComputerMove();
   }
-
   function rematch(){
     if(state.mode === 'solo'){
       startSoloGame();
@@ -948,17 +894,15 @@
       startPregame();
     }
   }
-
   // ---------- end of game ----------
   function endGame(){
     state.gameOver = true;
     const sx = countRuns(state.board, 1);
     const so = countRuns(state.board, 2);
-
     let title, sub;
     if(sx === so){
       title = "It's a tie!";
-      sub = sx + ' runs each';
+      sub = sx + ' points each';
     } else {
       const winnerSymbol = sx > so ? 1 : 2;
       const winScore = Math.max(sx, so);
@@ -970,16 +914,13 @@
         winnerLabel = (winnerSymbol === 1 ? 'X' : 'O') + ' wins!';
       }
       title = winnerLabel;
-      sub = winScore + ' runs to ' + loseScore;
+      sub = winScore + ' points to ' + loseScore;
     }
-
     document.getElementById('winTitle').textContent = title;
     document.getElementById('winSub').textContent = sub;
     buildBurstRings();
-
     setTimeout(() => goTo('win'), 500);
   }
-
   function buildBurstRings(){
     const stage = document.getElementById('winStage');
     stage.querySelectorAll('.burst-ring').forEach(el => el.remove());
@@ -991,7 +932,6 @@
       ring.style.animationDelay = (i * 0.12) + 's';
       stage.appendChild(ring);
     });
-    // reset title/sub animations
     const title = document.getElementById('winTitle');
     const sub = document.getElementById('winSub');
     const actions = document.querySelector('.win-actions');
@@ -1002,6 +942,5 @@
     });
   }
 </script>
-
 </body>
 </html>
