@@ -1,2 +1,2 @@
 # Muuuve-game
-Repository for Auduvant Technologies' game: Move
+Repository for Auduvant Technologies' game: Muuuve
